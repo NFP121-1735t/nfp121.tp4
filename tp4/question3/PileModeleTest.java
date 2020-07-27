@@ -33,6 +33,7 @@ public class PileModeleTest extends junit.framework.TestCase {
 	/**
 	 * Constructeur de la classe-test PileModeleTest
 	 */
+	private PileModele<Integer> p1;
 	public PileModeleTest() {
 	}
 
@@ -65,4 +66,18 @@ public class PileModeleTest extends junit.framework.TestCase {
 	 * "Enregistrer une méthode de test".
 	 */
 
+
+	
+	
+
+	public void testTT()
+	{
+	}
+
+	public void testTese()
+	{
+	}
 }
+
+
+

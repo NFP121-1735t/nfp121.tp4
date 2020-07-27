@@ -9,7 +9,16 @@ public class IHMQuestion2_2 extends JFrame {
     private JButton boutonA = new JButton("A");
     private JButton boutonB = new JButton("B");
     private JButton boutonC = new JButton("C");
-
+    //declarer les variables qui sont responsables aux
+    // boutons et la souris
+    private JButtonObserver jbo1;
+    private JButtonObserver jbo2;
+    private JButtonObserver jbo3;
+    
+    private JMouseObserver mo1;
+    private JMouseObserver mo2;
+    private JMouseObserver mo3;
+    
     private TextArea contenu = new TextArea(30, 80);
 
  
@@ -27,17 +36,32 @@ public class IHMQuestion2_2 extends JFrame {
         enHaut.setBackground(Color.magenta);
         
 
-        // à compléter à l'identique de la question 2_1, (du copier/coller)...
-        // le bouton A a 3 observateurs jbo1, jbo2 et jbo3
-
-        // le bouton B a 2 observateurs jbo1 et jbo2
-
-        // le bouton C a 1 observateur jbo1
-
-        // à compléter pour la question 2_2 (JMouseObserver)
-            // le bouton A a 1 observateur jmo1
-            // le bouton B a 1 observateur jmo2
-            // le bouton C a 1 observateur jmo3
+        jbo1 = new JButtonObserver("jbo1" , contenu);
+        jbo2 = new JButtonObserver("jbo2" , contenu);
+        jbo3 = new JButtonObserver("jbo3" , contenu);
+        
+        //la bouton A admet 3 observateurs
+        boutonA.addActionListener(jbo1);
+        boutonA.addActionListener(jbo2);
+        boutonA.addActionListener(jbo3);
+        
+        //la bouton B admet 2 observateurs
+        boutonB.addActionListener(jbo1);
+        boutonB.addActionListener(jbo2);
+        
+        //la bouton C admet un seul observateur
+        boutonC.addActionListener(jbo1);
+        
+        //declaration de JMouse
+        mo1 = new JMouseObserver("mo1" , contenu);
+        mo2 = new JMouseObserver("mo2" , contenu);
+        mo3 = new JMouseObserver("mo3" , contenu);
+        
+        // chaque bouton admet une seule entree au souris
+        
+        boutonA.addMouseListener(mo1);
+        boutonB.addMouseListener(mo2);
+        boutonC.addMouseListener(mo3);
         
     }
     

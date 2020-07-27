@@ -307,4 +307,9 @@ public class IHMCalculetteTest extends junit.framework.TestCase{
     }//end mouseMoveAndClickClick
 
   
+
+
+	
 }
+
+
